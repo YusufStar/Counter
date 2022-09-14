@@ -1,29 +1,31 @@
-let count = 0
+var count = 0
+var countLabel = document.getElementById('countLabel')
+var decrease = document.getElementById('decreaseBtn')
+var reset = document.getElementById('resetBtn')
+var increase = document.getElementById('increaseBtn')
 
-const value = document.querySelector("#value")
-const buttons = document.querySelectorAll(".btn")
-console.log(value, buttons)  
+decrease.onclick = function() {
+    count-=1
+    update()
+}
 
+reset.onclick = function() {
+    count=0
+    update()
+}
 
-buttons.forEach((btn) => {
-    console.log(btn)
-    btn.addEventListener("click", (event) => {
-        const styles = event.currentTarget.classList
-        if(styles.contains("increase")){
-            count++
-        }else if(styles.contains("decrease")){
-            count--
-        }else{
-            count = 0
-        }
-        if(count < 0){
-            value.style.color = ("red")
-        }else if(count > 0){
-            value.style.color = ("green")
-        }else{
-            value.style.color = ("black")
-            
-        }
-        value.textContent = count
-    })
-})
+increase.onclick = function() {
+    count+=1
+    update()
+}
+
+function update () {
+    countLabel.innerHTML = count;
+    if(count < 0) {
+        countLabel.style.color = "red";
+    } else if (count == 0) {
+        countLabel.style.color = "white";
+    } else {
+        countLabel.style.color = "green";
+    }
+}

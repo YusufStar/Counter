@@ -1,42 +1,20 @@
-main {
-    width: 100vw;
-    height: 100vh;
-} 
-
-.main {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+body {
+    background: linear-gradient(90deg, #000, rgb(134, 134, 134));
 }
 
-h1 {
-    font-size: 5rem;
-    font-weight: 600 !important;
-    color: rgba(0, 255, 255, 0.5);
-}
-
-.value{
-    font-size: 5rem;
+#countLabel {
+    display: block;
+    text-align: center;
     font-weight: 600;
+    font-size:100px;
     color: white;
-    text-shadow:-1px 1px 3px white !important;
-    background-color: #25283d0e;
-    border-radius: 1rem;
-    padding: 1rem 5rem;
+    transition: 0.5s ease;
+}
 
+button {   
+    padding: 1rem;
 }
-.btn{
-    font-weight: 600 !important;
-    border: 1px solid white;
-    transition: all 0.2s;
-    
-}
-.btn:hover{
-    font-weight: 600 !important;
-    font-size: 1.2rem !important;
-    border: 2px solid rgba(0, 255, 255, 0.5) !important;   
+
+.buttons {
+    text-align: center;
 }
